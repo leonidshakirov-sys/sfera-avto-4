@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://leonidshakirov-sys.github.io/sfera-avto-4/sitemap.xml

@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-paper antialiased;
+}
+
+::selection {
+  background: #e8b923;
+  color: #0b0c0e;
+}
+
+.wrap {
+  @apply mx-auto w-[min(100%-32px,1160px)];
+}
+
+.section {
+  @apply py-20 md:py-28;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.18em] text-amber;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+.btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold tracking-wide transition;
+}
+
+.btn-primary {
+  @apply bg-amber text-ink hover:bg-amber-bright;
+}
+
+.btn-outline {
+  @apply border border-white/25 bg-transparent text-paper hover:border-amber hover:text-amber;
+}
+
+.btn-dark {
+  @apply bg-paper text-ink hover:bg-white;
+}
+
+input,
+select,
+textarea {
+  @apply w-full rounded-xl border border-white/10 bg-steel px-4 py-3 text-paper outline-none transition placeholder:text-muted/70 focus:border-amber;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
