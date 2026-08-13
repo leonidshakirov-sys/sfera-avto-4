@@ -36,8 +36,6 @@ if (form) {
     const consent = data.get("consent");
     const name = String(data.get("name") || "").trim();
     const phone = String(data.get("phone") || "").trim();
-    const type = String(data.get("type") || "").trim();
-    const comment = String(data.get("comment") || "").trim();
 
     if (!consent) {
       setStatus("Нужно согласие на обработку персональных данных.", "err");
@@ -64,22 +62,10 @@ if (form) {
           return;
         }
       } catch {
-        // Fall through to the phone/mail fallback.
+        // Fall through to the confirmation page.
       }
     }
 
-    const body = [
-      "Заявка на машиноместо, ПАСК «Сфера-Авто»",
-      `Имя: ${name}`,
-      `Телефон: ${phone}`,
-      `Тип: ${type}`,
-      comment ? `Комментарий: ${comment}` : "",
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    window.location.href = `mailto:?subject=${encodeURIComponent("Заявка на парковку Сфера-Авто")}&body=${encodeURIComponent(body)}`;
-    setStatus("Если почтовый клиент не открылся, позвоните по телефону на сайте.", "ok");
-    form.reset();
+    window.location.href = "thanks.html";
   });
 }
