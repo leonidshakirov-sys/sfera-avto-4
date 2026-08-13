@@ -3,29 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Долгосрочная охраняемая парковка на Варшавке и МКАД — СфераАвто</title>
-  <meta name="description" content="Сдаём охраняемые машиноместа в долгосрочную аренду на первой линии Варшавского шоссе и МКАД, в торгово-сервисном комплексе СфераАвто. Чертаново Южное, метро Аннино.">
+  <title>Охраняемая парковка для автопарков на Варшавке и МКАД — СфераАвто</title>
+  <meta name="description" content="Долгосрочная аренда охраняемых машиномест в ТСК СфераАвто. Для транспортных компаний, таксопарков и автосалонов. Чертаново Южное, метро Аннино, 32-й км МКАД.">
   <link rel="canonical" href="https://leonidshakirov-sys.github.io/sfera-avto-4/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
-  <meta property="og:title" content="Долгосрочная охраняемая парковка СфераАвто">
-  <meta property="og:description" content="Машиноместа на длительный срок на первой линии Варшавского шоссе и МКАД. Чертаново Южное, метро Аннино.">
+  <meta property="og:title" content="Охраняемая парковка СфераАвто на Варшавке и МКАД">
+  <meta property="og:description" content="Машиноместа на длительный срок для транспортных компаний, таксопарков и автосалонов. Чертаново Южное, метро Аннино.">
   <meta property="og:url" content="https://leonidshakirov-sys.github.io/sfera-avto-4/">
-  <meta property="og:image" content="assets/photos/hero.jpg">
+  <meta property="og:image" content="assets/photos/pano.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("sfera-theme");
+        if (t === "showroom" || t === "livery") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ParkingFacility",
     "name": "СфераАвто",
     "url": "https://leonidshakirov-sys.github.io/sfera-avto-4/",
-    "telephone": "+7-495-712-11-99",
-    "email": "sferaavto@inbox.ru",
-    "image": "https://leonidshakirov-sys.github.io/sfera-avto-4/assets/photos/hero.jpg",
+    "telephone": "+7-916-265-92-62",
+    "image": "https://leonidshakirov-sys.github.io/sfera-avto-4/assets/photos/pano.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "МКАД, 32-й км, владение 15",
@@ -35,7 +43,7 @@
       "addressCountry": "RU"
     },
     "geo": {"@type": "GeoCoordinates", "latitude": 55.575, "longitude": 37.5983},
-    "openingHours": "Mo-Su 08:00-21:00"
+    "openingHours": "Mo-Su 08:00-22:00"
   }
   </script>
 </head>
@@ -44,45 +52,77 @@
   <header class="header">
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="СфераАвто">
-        <img src="assets/logo.png" alt="Сфера Авто">
+        <img src="assets/logo.png" alt="СФЕРАВТО — автосервис Япония + Корея">
       </a>
       <nav class="nav" data-nav>
+        <a href="#audience">Кому подходит</a>
         <a href="#features">Площадка</a>
         <a href="#tariffs">Аренда</a>
         <a href="#photos">Фото</a>
         <a href="#location">Как доехать</a>
         <a href="#contact">Заявка</a>
-        <a class="header-phone" href="tel:+74957121199">+7 (495) 712-11-99</a>
+        <a class="header-phone" href="tel:+79162659262">+7 (916) 265-92-62</a>
       </nav>
       <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-label="Меню">☰</button>
     </div>
   </header>
 
+  <div class="theme-bar" role="group" aria-label="Вариант оформления">
+    <div class="wrap theme-bar-inner">
+      <span>Оформление</span>
+      <button type="button" data-theme-set="asphalt">Асфальт</button>
+      <button type="button" data-theme-set="showroom">Автосалон</button>
+      <button type="button" data-theme-set="livery">Ливрея</button>
+    </div>
+  </div>
+
   <main id="main">
     <section class="hero" id="top">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow">Долгосрочная аренда · метро Аннино</p>
-          <h1>Охраняемая парковка на первой линии Варшавского шоссе и МКАД в торгово-сервисном комплексе СфераАвто</h1>
-          <p class="lead">Сдаём машиноместа на длительный срок. Открытая охраняемая площадка у автосервисов и магазинов запчастей, заезд с первой линии Варшавки и МКАД.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Арендовать место</a>
-            <a class="btn btn-ghost" href="tel:+74957121199">Позвонить</a>
-          </div>
-        </div>
-        <div class="hero-card">
-          <img src="assets/photos/hero.jpg" alt="Открытая охраняемая парковка СфераАвто у Варшавского шоссе и МКАД">
-          <div class="hero-meta">
-            <div class="chip">Первая линия Варшавки и МКАД</div>
-            <div class="chip">Аренда на долгий срок</div>
+      <div class="wrap">
+        <div class="hero-pano">
+          <img src="assets/photos/pano.jpg" alt="Панорама охраняемой площадки СфераАвто у Варшавского шоссе и МКАД">
+          <div class="hero-overlay">
+            <p class="eyebrow">Охраняемая площадка · метро Аннино</p>
+            <h1>Машиноместа на первой линии Варшавского шоссе и МКАД</h1>
+            <p class="lead">Торгово-сервисный комплекс СфераАвто сдаёт охраняемые открытые места в долгосрочную аренду. Площадка рассчитана на транспортные компании, таксопарки и автосалоны: заезд с Варшавки и кольцевой, пост на въезде, сервис на той же территории.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Оставить заявку</a>
+              <a class="btn btn-ghost" href="tel:+79162659262">+7 (916) 265-92-62</a>
+            </div>
           </div>
         </div>
       </div>
       <div class="wrap stats">
         <div class="stat"><b>32-й км</b><span>МКАД, владение 15</span></div>
         <div class="stat"><b>Аннино</b><span>ближайшая станция метро</span></div>
-        <div class="stat"><b>надолго</b><span>сдаём места в долгосрочную аренду</span></div>
-        <div class="stat"><b>8:00–21:00</b><span>ежедневно, в часы работы комплекса</span></div>
+        <div class="stat"><b>надолго</b><span>аренда от месяца и дольше</span></div>
+        <div class="stat"><b>8:00–22:00</b><span>ежедневно, в часы работы комплекса</span></div>
+      </div>
+    </section>
+
+    <section id="audience">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Для кого эта площадка</h2>
+          <p>Сдаём постоянные машиноместа организациям, которым нужна охраняемая стоянка у МКАД, а не случайное место на обочине.</p>
+        </div>
+        <div class="audience">
+          <article class="card">
+            <p class="eyebrow">Автопарки</p>
+            <h3>Транспортным компаниям</h3>
+            <p>Закреплённая стоянка коммерческого транспорта на первой линии Варшавки и МКАД. Машины остаются на огороженной территории с постом, без ежедневного поиска места после рейса.</p>
+          </article>
+          <article class="card">
+            <p class="eyebrow">Сменный парк</p>
+            <h3>Таксопаркам</h3>
+            <p>Постоянные машиноместа для сменных автомобилей. Водители заезжают и выезжают в часы работы комплекса — ежедневно с 8:00 до 22:00.</p>
+          </article>
+          <article class="card">
+            <p class="eyebrow">Товарный фонд</p>
+            <h3>Автосалонам</h3>
+            <p>Хранение товарных автомобилей, trade-in и подменного фонда на охраняемой площадке рядом с сервисом. Удобно держать запас машин у МКАД, а не развозить по случайным дворам.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -90,13 +130,13 @@
       <div class="wrap">
         <div class="section-head">
           <h2>Площадка СфераАвто</h2>
-          <p>Автокомплекс на пересечении Варшавского шоссе и МКАД: сервис, запчасти, кузовные работы и охраняемые машиноместа рядом.</p>
+          <p>Автокомплекс на пересечении Варшавского шоссе и МКАД: сервис, запчасти и охраняемые машиноместа на одной территории.</p>
         </div>
         <div class="bento">
           <article class="card wide">
-            <img src="assets/photos/sign.jpg" alt="Вывеска Сфера Авто на здании комплекса">
+            <img src="assets/photos/sign.jpg" alt="Вывеска СФЕРАВТО на здании комплекса">
             <div class="overlay">
-              <h3>Автомобильная территория</h3>
+              <h3>Территория автокомплекса</h3>
               <p>Не дворовая стихийка: место на площадке торгово-сервисного комплекса.</p>
             </div>
           </article>
@@ -130,17 +170,17 @@
           <article class="step">
             <div class="num">01</div>
             <h3>Заявка</h3>
-            <p>Оставьте телефон или позвоните. Нас интересует долгосрочная аренда машиноместа.</p>
+            <p>Позвоните или оставьте номер. Нас интересует долгосрочная аренда машиноместа для парка или салона.</p>
           </article>
           <article class="step">
             <div class="num">02</div>
             <h3>Осмотр</h3>
-            <p>Покажем заезд с Варшавки / МКАД и свободные места на площадке.</p>
+            <p>Покажем заезд с Варшавки и МКАД, шлагбаум и свободные места на площадке.</p>
           </article>
           <article class="step">
             <div class="num">03</div>
             <h3>Договор</h3>
-            <p>Согласуем срок, оплату и порядок доступа в часы работы комплекса.</p>
+            <p>Согласуем срок, оплату и порядок доступа в часы работы комплекса, с 8:00 до 22:00.</p>
           </article>
         </div>
       </div>
@@ -150,7 +190,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2>Что сдаём</h2>
-          <p>Только постоянные машиноместа. Цену сообщаем по запросу — зависит от срока.</p>
+          <p>Только постоянные машиноместа. Стоимость сообщаем по запросу — она зависит от срока и числа мест.</p>
         </div>
         <div class="tariffs">
           <article class="tariff featured">
@@ -161,15 +201,15 @@
               <li>Охраняемая открытая стоянка на территории СфераАвто</li>
               <li>Первая линия Варшавского шоссе и МКАД</li>
               <li>Срок — от месяца и дольше</li>
-              <li>Доступ в часы работы комплекса, ежедневно 8:00–21:00</li>
+              <li>Доступ ежедневно с 8:00 до 22:00, в часы работы комплекса</li>
             </ul>
           </article>
           <article class="tariff">
-            <h3>Кому подходит</h3>
+            <h3>Кому это нужно</h3>
             <ul>
-              <li>Кто держит машину у МКАД постоянно</li>
-              <li>Жителям Чертаново Южного и водителям с Варшавки</li>
-              <li>Тем, кто не ищет почасовую стоянку у сервиса</li>
+              <li>Транспортным компаниям с коммерческим парком</li>
+              <li>Таксопаркам со сменными автомобилями</li>
+              <li>Автосалонам для товарного и подменного фонда</li>
             </ul>
           </article>
         </div>
@@ -180,9 +220,10 @@
       <div class="wrap">
         <div class="section-head">
           <h2>Фото площадки</h2>
-          <p>Снимки территории: открытая стоянка, шлагбаум, фасад СфераАвто и боксы сервиса.</p>
+          <p>Панорама территории, шлагбаум, фасад СфераАвто и боксы сервиса.</p>
         </div>
         <div class="gallery">
+          <img class="pano-shot" src="assets/photos/pano.jpg" alt="Панорамный снимок охраняемой площадки СфераАвто">
           <img src="assets/photos/lot.jpg" alt="Парковка СфераАвто у Варшавского шоссе">
           <img src="assets/photos/trucks.jpg" alt="Площадка для легковых и коммерческих машин">
           <img src="assets/photos/barrier.jpg" alt="Шлагбаум и пост на въезде">
@@ -215,12 +256,16 @@
         </div>
         <div class="faq">
           <details open>
+            <summary>Подойдёт ли площадка таксопарку или автосалону?</summary>
+            <p>Да. Сдаём места транспортным компаниям, таксопаркам и автосалонам — тем, кому нужна постоянная охраняемая стоянка у МКАД, а не визит на пару часов.</p>
+          </details>
+          <details>
             <summary>Можно оставить машину на пару часов, пока в сервисе?</summary>
             <p>Нет. Сдаём только машиноместа в долгосрочную аренду, а не стоянку на время визита.</p>
           </details>
           <details>
             <summary>Парковка крытая и круглосуточная?</summary>
-            <p>Нет. Площадка открытая. Комплекс работает ежедневно с 8:00 до 21:00.</p>
+            <p>Нет. Площадка открытая. Комплекс работает ежедневно с 8:00 до 22:00.</p>
           </details>
           <details>
             <summary>Как добраться от метро?</summary>
@@ -228,7 +273,7 @@
           </details>
           <details>
             <summary>Как узнать цену за длительный срок?</summary>
-            <p>Позвоните +7 (495) 712-11-99 или оставьте заявку — перезвоним с актуальным тарифом.</p>
+            <p>Позвоните +7 (916) 265-92-62 или оставьте заявку — перезвоним с актуальным тарифом.</p>
           </details>
         </div>
       </div>
@@ -240,9 +285,17 @@
           <input type="hidden" name="form-name" value="parking-request">
           <p hidden><label>Не заполняйте: <input name="bot-field"></label></p>
           <h2>Заявка на долгосрочную аренду</h2>
-          <p>Напишите телефон — перезвоним и скажем, какие места свободны на долгий срок.</p>
+          <p>Напишите телефон — перезвоним и скажем, какие места свободны.</p>
           <label>Имя<input name="name" autocomplete="name" required placeholder="Как к вам обращаться"></label>
-          <label>Телефон<input name="phone" type="tel" autocomplete="tel" required placeholder="+7 ("></label>
+          <label>Телефон<input name="phone" type="tel" autocomplete="tel" required placeholder="+7 (916)"></label>
+          <label>Кто арендует
+            <select name="audience">
+              <option>Транспортная компания</option>
+              <option>Таксопарк</option>
+              <option>Автосалон</option>
+              <option>Другое</option>
+            </select>
+          </label>
           <label>Срок
             <select name="type">
               <option>От месяца</option>
@@ -250,7 +303,7 @@
               <option>На год</option>
             </select>
           </label>
-          <label>Комментарий<textarea name="comment" placeholder="Марка автомобиля, желаемый срок аренды"></textarea></label>
+          <label>Комментарий<textarea name="comment" placeholder="Число машин, марки, желаемый срок аренды"></textarea></label>
           <label class="consent">
             <input type="checkbox" name="consent" required>
             <span>Согласен на обработку персональных данных по <a href="privacy.html">политике конфиденциальности</a>.</span>
@@ -260,9 +313,8 @@
         </form>
         <aside class="contact-aside">
           <h2>Контакты</h2>
-          <p><a href="tel:+74957121199">+7 (495) 712-11-99</a></p>
-          <p><a href="mailto:sferaavto@inbox.ru">sferaavto@inbox.ru</a></p>
-          <p>Ежедневно 8:00–21:00<br>Администрация: пн–пт 9:00–17:00</p>
+          <p><a href="tel:+79162659262">+7 (916) 265-92-62</a></p>
+          <p>Ежедневно 8:00–22:00<br>Администрация: пн–пт 9:00–17:00</p>
           <p>Москва, Чертаново Южное<br>МКАД, 32-й км, владение 15<br>ТСК СфераАвто</p>
         </aside>
       </div>
@@ -273,11 +325,12 @@
     <div class="wrap footer-grid">
       <div>
         <img src="assets/logo.png" alt="СфераАвто">
-        <p>Торгово-сервисный комплекс на первой линии Варшавского шоссе и МКАД. Охраняемые машиноместа в долгосрочную аренду.</p>
+        <p>Торгово-сервисный комплекс на первой линии Варшавского шоссе и МКАД. Охраняемые машиноместа для транспортных компаний, таксопарков и автосалонов.</p>
       </div>
       <div>
         <p>Москва, Чертаново Южное<br>МКАД, 32-й км, вл. 15</p>
         <p>Метро Аннино</p>
+        <p><a href="tel:+79162659262">+7 (916) 265-92-62</a></p>
       </div>
       <div>
         <p><a href="privacy.html">Политика конфиденциальности</a></p>

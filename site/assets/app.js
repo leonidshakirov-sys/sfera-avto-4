@@ -3,6 +3,39 @@ const menuBtn = document.querySelector("[data-menu]");
 const form = document.querySelector("[data-form]");
 const statusEl = document.querySelector("[data-status]");
 const yearEl = document.querySelector("[data-year]");
+const THEME_KEY = "sfera-theme";
+const THEMES = ["asphalt", "showroom", "livery"];
+
+function applyTheme(theme) {
+  const next = THEMES.includes(theme) ? theme : "asphalt";
+  if (next === "asphalt") {
+    document.documentElement.removeAttribute("data-theme");
+  } else {
+    document.documentElement.setAttribute("data-theme", next);
+  }
+  try {
+    localStorage.setItem(THEME_KEY, next);
+  } catch {
+    // Ignore private-mode storage errors.
+  }
+  document.querySelectorAll("[data-theme-set]").forEach((btn) => {
+    btn.setAttribute("aria-pressed", String(btn.getAttribute("data-theme-set") === next));
+  });
+}
+
+(function initTheme() {
+  let stored = "asphalt";
+  try {
+    stored = localStorage.getItem(THEME_KEY) || "asphalt";
+  } catch {
+    stored = "asphalt";
+  }
+  applyTheme(stored);
+})();
+
+document.querySelectorAll("[data-theme-set]").forEach((btn) => {
+  btn.addEventListener("click", () => applyTheme(btn.getAttribute("data-theme-set")));
+});
 
 if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());

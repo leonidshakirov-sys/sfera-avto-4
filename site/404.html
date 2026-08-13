@@ -7,6 +7,14 @@
   <meta name="robots" content="noindex">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("sfera-theme");
+        if (t === "showroom" || t === "livery") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <main class="legal wrap">
