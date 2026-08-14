@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     siteName: name,
     title: seo.title,
     description: seo.description,
-    images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: name }],
+    images: [{ url: "/images/share.jpg", width: 1200, height: 630, alt: name }],
   },
   twitter: {
     card: "summary_large_image",
     title: seo.title,
     description: seo.description,
-    images: ["/images/og.jpg"],
+    images: ["/images/share.jpg"],
   },
   robots: { index: true, follow: true },
 };
@@ -42,7 +42,7 @@ const jsonLd = {
   name,
   url: siteUrl,
   telephone: phone.tel,
-  image: `${siteUrl}/images/og.jpg`,
+  image: `${siteUrl}/images/share.jpg`,
   address: {
     "@type": "PostalAddress",
     streetAddress: address.line,
