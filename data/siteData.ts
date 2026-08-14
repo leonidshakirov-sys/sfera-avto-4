@@ -42,6 +42,7 @@ export const siteData = {
       "https://yandex.ru/map-widget/v1/?ll=37.5983,55.575&z=16&pt=37.5983,55.575,pm2rdm",
   },
   siteUrl: "https://sfera32.ru",
+  metrikaId: 111611815,
   seo: {
     title: "Охраняемая стоянка на Варшавском шоссе и МКАД | Сфера Авто",
     description:
