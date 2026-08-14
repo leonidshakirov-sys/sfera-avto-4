@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteData } from "@/data/siteData";
+import { Logo } from "@/components/Logo";
 
 export function Footer() {
   const { name, address, workingHours, location } = siteData;
@@ -7,9 +8,7 @@ export function Footer() {
     <footer className="border-t border-white/10 pb-28 pt-10 md:pb-12">
       <div className="wrap flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="tracking-[0.14em]">
-            <span className="text-paper/80">СФЕРА</span> <span className="font-bold">АВТО</span>
-          </p>
+          <Logo className="h-12" />
           <p className="mt-2 max-w-sm text-sm text-muted">
             Охраняемая площадка на {address.short}. {location.summary}. {workingHours.long}.
           </p>
