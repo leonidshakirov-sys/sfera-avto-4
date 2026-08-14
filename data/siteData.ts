@@ -35,7 +35,7 @@ export const siteData = {
     mapEmbed:
       "https://yandex.ru/map-widget/v1/?ll=37.5983,55.575&z=16&pt=37.5983,55.575,pm2rdm",
   },
-  siteUrl: "https://leonidshakirov-sys.github.io/sfera-avto-4",
+  siteUrl: "https://sfera32.ru",
   seo: {
     title: "Охраняемая стоянка и площадка на МКАД в аренду | Сфера Авто",
     description:
