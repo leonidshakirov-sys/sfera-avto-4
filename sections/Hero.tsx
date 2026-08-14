@@ -20,7 +20,7 @@ export function Hero() {
         alt="Охраняемая площадка Сфера Авто на первой линии Варшавского шоссе и МКАД"
         fill
         priority
-        className="object-cover object-[center_62%]"
+        className="object-cover object-[22%_center] md:object-center"
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/78 to-ink/25" />
