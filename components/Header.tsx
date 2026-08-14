@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { siteData } from "@/data/siteData";
+import { CtaButton } from "@/components/CtaButton";
+import { IconPhone } from "@/components/Icons";
 import { Logo } from "@/components/Logo";
 
 const links = [
