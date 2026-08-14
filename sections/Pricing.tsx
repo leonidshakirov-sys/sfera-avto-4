@@ -20,7 +20,7 @@ export function Pricing() {
                 {priceLabel(card.fromRub, "custom" in card && card.custom)}
               </p>
               {"custom" in card && card.custom ? null : (
-                <p className="mt-1 text-sm text-muted">в месяц, по запросу уточним точную сумму</p>
+                <p className="mt-1 text-sm text-muted">за машиноместо в месяц</p>
               )}
               <CtaButton href={`#contact`} className="mt-8">
                 Получить предложение

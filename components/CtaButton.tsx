@@ -1,4 +1,4 @@
-import { siteData } from "@/data/siteData";
+import Link from "next/link";
 
 type Props = {
   href: string;
@@ -13,14 +13,20 @@ export function CtaButton({ href, children, variant = "primary", className = "" 
     outline: "btn btn-outline",
     dark: "btn btn-dark",
   }[variant];
+  const cls = `${styles} ${className}`;
+  const internal = href.startsWith("/") && !href.startsWith("//");
+
+  if (internal) {
+    return (
+      <Link href={href} className={cls}>
+        {children}
+      </Link>
+    );
+  }
 
   return (
-    <a href={href} className={`${styles} ${className}`}>
+    <a href={href} className={cls}>
       {children}
     </a>
   );
-}
-
-export function Hours({ variant = "short" }: { variant?: "short" | "long" }) {
-  return <span>{variant === "long" ? siteData.workingHours.long : siteData.workingHours.display}</span>;
 }

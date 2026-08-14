@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Photo } from "@/components/Photo";
 import { siteData } from "@/data/siteData";
 
 export function Security() {
@@ -7,7 +7,7 @@ export function Security() {
     <section id="security" className="section">
       <div className="wrap grid items-center gap-8 lg:grid-cols-2">
         <div className="relative min-h-[380px] overflow-hidden rounded-3xl">
-          <Image
+          <Photo
             src="/images/barrier.jpg"
             alt="Шлагбаум и пост охраны на въезде Сфера Авто"
             fill
