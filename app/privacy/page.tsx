@@ -16,6 +16,14 @@ export default function PrivacyPage() {
         <p className="mt-3 text-muted">Имя, номер телефона, тип транспорта, количество единиц и комментарий к заявке.</p>
         <h2 className="mt-10 text-2xl font-semibold">Цели</h2>
         <p className="mt-3 text-muted">Обратный звонок, расчёт аренды и согласование просмотра площадки.</p>
+        <h2 className="mt-10 text-2xl font-semibold">Яндекс Метрика</h2>
+        <p className="mt-3 text-muted">
+          На сайте установлен счётчик Яндекс Метрики. Он собирает обезличенные данные о посещениях — просмотренные страницы, устройство, источник перехода — чтобы понимать, как работает сайт. Подробнее:{" "}
+          <a className="text-amber hover:underline" href="https://yandex.ru/legal/metrica_termsofuse/" target="_blank" rel="noopener">
+            условия использования Яндекс Метрики
+          </a>
+          .
+        </p>
         <h2 className="mt-10 text-2xl font-semibold">Ваши права</h2>
         <p className="mt-3 text-muted">
           Уточнить или удалить данные можно по телефону{" "}
