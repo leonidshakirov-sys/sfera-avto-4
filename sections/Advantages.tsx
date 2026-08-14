@@ -13,7 +13,7 @@ export function Advantages() {
             const text = "hours" in item && item.hours ? siteData.workingHours.long : item.text;
             return (
               <article key={item.title} className="rounded-3xl border border-white/10 bg-steel p-6">
-                <Icon className="h-7 w-7 text-amber" />
+                {Icon ? <Icon className="h-7 w-7 text-amber" /> : null}
                 <h3 className="mt-4 text-lg font-semibold">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{text}</p>
               </article>

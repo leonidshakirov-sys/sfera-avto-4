@@ -4,6 +4,7 @@ import { useState } from "react";
 import { siteData } from "@/data/siteData";
 import { CtaButton } from "@/components/CtaButton";
 import { IconPhone } from "@/components/Icons";
+import { Logo } from "@/components/Logo";
 
 const links = [
   { href: "#utp", label: "Площадка" },
@@ -21,9 +22,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/90 backdrop-blur-xl">
       <div className="wrap flex h-[72px] items-center justify-between gap-4">
-        <a href="#top" className="shrink-0 tracking-[0.14em]">
-          <span className="text-sm text-paper/80">СФЕРА</span>{" "}
-          <span className="text-sm font-bold text-paper">АВТО</span>
+        <a href="#top" className="shrink-0" aria-label="Сфера Авто">
+          <Logo className="h-8 md:h-10" />
         </a>
         <nav className="hidden items-center gap-5 lg:flex">
           {links.map((item) => (
@@ -34,13 +34,18 @@ export function Header() {
         </nav>
         <div className="hidden items-center gap-4 md:flex">
           <p className="text-xs font-medium text-muted">{siteData.workingHours.display}</p>
-          <CtaButton href={`tel:${siteData.phone.tel}`}>
+          <CtaButton href={`tel:${siteData.phone.tel}`} className="whitespace-nowrap">
             <IconPhone className="h-4 w-4" />
-            Позвонить
+            {siteData.phone.tel}
           </CtaButton>
         </div>
-        <a className="btn btn-primary md:hidden" href={`tel:${siteData.phone.tel}`}>
+        <a
+          className="btn btn-primary whitespace-nowrap px-3 text-xs md:hidden"
+          href={`tel:${siteData.phone.tel}`}
+          aria-label={`Позвонить ${siteData.phone.tel}`}
+        >
           <IconPhone className="h-4 w-4" />
+          {siteData.phone.tel}
         </a>
         <button
           type="button"
@@ -61,7 +66,10 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <CtaButton href={`tel:${siteData.phone.tel}`}>Позвонить</CtaButton>
+            <CtaButton href={`tel:${siteData.phone.tel}`} className="whitespace-nowrap">
+              <IconPhone className="h-4 w-4" />
+              {siteData.phone.tel}
+            </CtaButton>
           </div>
         </div>
       ) : null}

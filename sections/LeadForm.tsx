@@ -88,19 +88,22 @@ export function LeadForm() {
         <aside className="rounded-3xl border border-white/10 bg-graphite p-6 md:p-8">
           <p className="eyebrow">Связь</p>
           <a href={`tel:${phone.tel}`} className="mt-4 block text-3xl font-semibold text-amber">
-            {phone.display}
+            {phone.tel}
           </a>
           <p className="mt-3 text-muted">{siteData.workingHours.long}</p>
           <p className="mt-2 text-muted">{siteData.address.line}</p>
+          <p className="mt-1 text-muted">{siteData.location.highways}</p>
+          <p className="mt-1 text-muted">{siteData.location.busStop}</p>
+          <p className="mt-1 text-muted">{siteData.location.metro}</p>
           <div className="mt-8 grid gap-3">
+            <a className="btn btn-primary whitespace-nowrap" href={`tel:${phone.tel}`}>
+              {phone.tel}
+            </a>
             <a className="btn btn-outline" href={messengers.whatsapp} target="_blank" rel="noopener">
               WhatsApp
             </a>
             <a className="btn btn-outline" href={messengers.telegram} target="_blank" rel="noopener">
               Telegram
-            </a>
-            <a className="btn btn-outline" href={messengers.max} target="_blank" rel="noopener">
-              MAX
             </a>
           </div>
         </aside>

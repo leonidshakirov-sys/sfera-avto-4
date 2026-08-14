@@ -3,12 +3,12 @@ import { siteData } from "@/data/siteData";
 import { CtaButton } from "@/components/CtaButton";
 
 export function Utp() {
-  const { workingHours, address } = siteData;
+  const { workingHours, address, location } = siteData;
   const stats = [
     { value: siteData.area, label: "площадь" },
     { value: `${workingHours.from}–${workingHours.to}`, label: workingHours.days },
     { value: address.short, label: "адрес" },
-    { value: "Охрана", label: "охраняемая территория" },
+    { value: "Аннино", label: "одна остановка на автобусе" },
   ];
 
   return (
@@ -17,22 +17,22 @@ export function Utp() {
         <div className="relative min-h-[420px] overflow-hidden rounded-3xl">
           <Photo
             src="/images/lot-mkad.jpg"
-            alt="Площадка Сфера Авто рядом с МКАД"
+            alt="Площадка Сфера Авто на первой линии Варшавского шоссе и МКАД"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>
         <div>
-          <p className="eyebrow">Доступ к магистрали</p>
+          <p className="eyebrow">Расположение</p>
           <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-            Площадка для бизнеса, которому нужен быстрый доступ к МКАД
+            Первая линия Варшавского шоссе и МКАД
           </h2>
           <p className="mt-5 text-lg text-muted">
             Не нужно искать место во дворах, на временных парковках или далеко от основного маршрута.
           </p>
           <p className="mt-4 text-lg text-muted">
-            Транспорт размещается на охраняемой территории рядом с МКАД.
+            Транспорт размещается на охраняемой территории. {location.summary}.
           </p>
           <p className="mt-4 text-paper">
             Доступ к площадке: {workingHours.long.toLowerCase()}.
