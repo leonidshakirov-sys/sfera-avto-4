@@ -34,7 +34,7 @@ export function Gallery() {
             className="relative min-h-[280px] overflow-hidden rounded-3xl md:col-span-3 md:min-h-[460px]"
             onClick={() => setActive(0)}
           >
-            <Photo src={photos[0].src} alt={photos[0].alt} fill className="object-cover object-[center_60%]" sizes="100vw" />
+            <Photo src={photos[0].src} alt={photos[0].alt} fill className="object-cover object-center" sizes="100vw" />
             <span className="absolute bottom-4 left-4 rounded-full bg-ink/70 px-3 py-1 text-sm">{photos[0].caption}</span>
           </button>
           {photos.slice(1).map((photo, index) => (
