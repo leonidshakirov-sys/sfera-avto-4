@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { siteData } from "@/data/siteData";
@@ -24,9 +25,9 @@ export default function PrivacyPage() {
           .
         </p>
         <p className="mt-10">
-          <a className="text-amber" href="/">
+          <Link className="text-amber" href="/">
             На главную
-          </a>
+          </Link>
         </p>
       </main>
       <Footer />

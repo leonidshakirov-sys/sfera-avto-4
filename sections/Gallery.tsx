@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import { Photo } from "@/components/Photo";
 import { siteData } from "@/data/siteData";
 import { CtaButton } from "@/components/CtaButton";
 import { IconClose } from "@/components/Icons";
@@ -34,7 +34,7 @@ export function Gallery() {
             className="relative min-h-[280px] overflow-hidden rounded-3xl md:col-span-3 md:min-h-[460px]"
             onClick={() => setActive(0)}
           >
-            <Image src={photos[0].src} alt={photos[0].alt} fill className="object-cover object-[center_60%]" sizes="100vw" />
+            <Photo src={photos[0].src} alt={photos[0].alt} fill className="object-cover object-[center_60%]" sizes="100vw" />
             <span className="absolute bottom-4 left-4 rounded-full bg-ink/70 px-3 py-1 text-sm">{photos[0].caption}</span>
           </button>
           {photos.slice(1).map((photo, index) => (
@@ -44,7 +44,7 @@ export function Gallery() {
               className={`relative min-h-[200px] overflow-hidden rounded-2xl ${photo.src.includes("access") ? "md:col-span-2" : ""}`}
               onClick={() => setActive(index + 1)}
             >
-              <Image
+              <Photo
                 src={photo.src}
                 alt={photo.alt}
                 fill
@@ -69,7 +69,7 @@ export function Gallery() {
             ‹
           </button>
           <div className="relative h-[min(80vh,720px)] w-[min(92vw,1100px)]">
-            <Image src={current.src} alt={current.alt} fill className="object-contain" sizes="92vw" />
+            <Photo src={current.src} alt={current.alt} fill className="object-contain" sizes="92vw" />
           </div>
           <button type="button" className="absolute right-3 top-1/2 text-3xl" onClick={() => setActive((i) => (i == null ? 0 : (i + 1) % photos.length))} aria-label="Вперёд">
             ›

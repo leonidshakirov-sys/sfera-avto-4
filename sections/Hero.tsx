@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Photo } from "@/components/Photo";
 import { siteData } from "@/data/siteData";
 import { CtaButton } from "@/components/CtaButton";
 import { IconCam, IconLight, IconRoad, IconShield } from "@/components/Icons";
@@ -15,9 +15,9 @@ export function Hero() {
 
   return (
     <section id="top" className="relative min-h-[92vh] overflow-hidden">
-      <Image
+      <Photo
         src="/images/hero.jpg"
-        alt="Охраняемая площадка Сфера Авто на 32-м км МКАД"
+        alt="Охраняемая площадка Сфера Авто, 32-й км МКАД, владение 15"
         fill
         priority
         className="object-cover object-[center_62%]"

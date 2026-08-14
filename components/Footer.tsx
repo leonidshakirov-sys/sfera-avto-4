@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { siteData } from "@/data/siteData";
 
 export function Footer() {
@@ -16,9 +17,9 @@ export function Footer() {
         <div className="text-sm text-muted">
           <p>{address.line}</p>
           <p className="mt-2">
-            <a className="text-amber hover:underline" href="/privacy/">
+            <Link className="text-amber hover:underline" href="/privacy">
               Политика конфиденциальности
-            </a>
+            </Link>
           </p>
           <p className="mt-2">© {name}, {new Date().getFullYear()}</p>
         </div>

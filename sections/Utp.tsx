@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Photo } from "@/components/Photo";
 import { siteData } from "@/data/siteData";
 import { CtaButton } from "@/components/CtaButton";
 
@@ -15,7 +15,7 @@ export function Utp() {
     <section id="utp" className="section pt-0">
       <div className="wrap grid items-center gap-10 lg:grid-cols-2">
         <div className="relative min-h-[420px] overflow-hidden rounded-3xl">
-          <Image
+          <Photo
             src="/images/lot-mkad.jpg"
             alt="Площадка Сфера Авто рядом с МКАД"
             fill

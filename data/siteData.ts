@@ -5,9 +5,9 @@ export const siteData = {
   areaShort: "2000 м²",
   address: {
     line: "32-й км МКАД, владение 15",
-    short: "32-й км МКАД",
+    short: "32-й км МКАД, владение 15",
     city: "Москва",
-    full: "Москва, 32-й км МКАД, владение 15",
+    full: "32-й км МКАД, владение 15",
   },
   geo: { lat: 55.575, lng: 37.5983 },
   phone: {
@@ -35,17 +35,17 @@ export const siteData = {
     mapEmbed:
       "https://yandex.ru/map-widget/v1/?ll=37.5983,55.575&z=16&pt=37.5983,55.575,pm2rdm",
   },
-  siteUrl: "https://leonidshakirov-sys.github.io/sfera-avto-4",
+  siteUrl: "https://sfera32.ru",
   seo: {
     title: "Охраняемая стоянка и площадка на МКАД в аренду | Сфера Авто",
     description:
-      "Охраняемая площадка на 32-м км МКАД для автомобилей, коммерческого транспорта, грузовиков и спецтехники. Видеонаблюдение, освещение, удобный въезд. Ежедневно с 08:00 до 22:00.",
+      "Охраняемая площадка на 32-м км МКАД, владение 15, для автомобилей, коммерческого транспорта, грузовиков и спецтехники. Видеонаблюдение, освещение, удобный въезд. Ежедневно с 08:00 до 22:00.",
   },
   prices: {
-    car: { id: "car", title: "Легковой автомобиль", fromRub: null as number | null },
-    commercial: { id: "commercial", title: "Коммерческий транспорт", fromRub: null as number | null },
-    special: { id: "special", title: "Спецтехника", fromRub: null as number | null },
-    truck: { id: "truck", title: "Грузовой транспорт", fromRub: null as number | null },
+    car: { id: "car", title: "Легковой автомобиль", fromRub: 4000 as number | null },
+    commercial: { id: "commercial", title: "Коммерческий транспорт", fromRub: 5000 as number | null },
+    special: { id: "special", title: "Спецтехника", fromRub: 7000 as number | null },
+    truck: { id: "truck", title: "Грузовой транспорт", fromRub: 10000 as number | null },
     fleet: { id: "fleet", title: "Автопарк / часть территории", fromRub: null as number | null, custom: true },
   },
   transportTypes: [

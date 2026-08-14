@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Photo } from "@/components/Photo";
 import { CtaButton } from "@/components/CtaButton";
 
 const cards = [
@@ -37,7 +37,7 @@ export function Audience() {
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {cards.map((card) => (
             <article key={card.title} className="group relative min-h-[340px] overflow-hidden rounded-3xl">
-              <Image src={card.image} alt={card.alt} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+              <Photo src={card.image} alt={card.alt} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <h3 className="text-2xl font-semibold">{card.title}</h3>
