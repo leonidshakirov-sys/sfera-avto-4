@@ -33,6 +33,28 @@ export function IconLight({ className = "h-6 w-6" }: { className?: string }) {
   );
 }
 
+export function IconBus({ className = "h-6 w-6" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <rect x="5" y="3.5" width="14" height="14" rx="2.2" stroke="currentColor" strokeWidth="1.6"/>
+      <path d="M5 10.5h14" stroke="currentColor" strokeWidth="1.6"/>
+      <path d="M8 17.5v2M16 17.5v2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+      <circle cx="8.5" cy="14.2" r="1" fill="currentColor"/>
+      <circle cx="15.5" cy="14.2" r="1" fill="currentColor"/>
+    </svg>
+  );
+}
+
+export function IconMetro({ className = "h-6 w-6" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="M6.5 17.5 12 6.5l5.5 11" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/>
+      <path d="M8.2 14h7.6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+      <circle cx="12" cy="12" r="8.25" stroke="currentColor" strokeWidth="1.6"/>
+    </svg>
+  );
+}
+
 export function IconRoad({ className = "h-6 w-6" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
@@ -95,4 +117,15 @@ export function IconClose({ className = "h-6 w-6" }: { className?: string }) {
   );
 }
 
-export const advantageIcons = [IconRoad, IconCam, IconLight, IconShield, IconBolt, IconWrench, IconGrid, IconClock];
+export const advantageIcons = [
+  IconRoad,
+  IconBus,
+  IconMetro,
+  IconCam,
+  IconLight,
+  IconShield,
+  IconBolt,
+  IconWrench,
+  IconGrid,
+  IconClock,
+];

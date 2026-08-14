@@ -34,13 +34,18 @@ export function Header() {
         </nav>
         <div className="hidden items-center gap-4 md:flex">
           <p className="text-xs font-medium text-muted">{siteData.workingHours.display}</p>
-          <CtaButton href={`tel:${siteData.phone.tel}`}>
+          <CtaButton href={`tel:${siteData.phone.tel}`} className="whitespace-nowrap">
             <IconPhone className="h-4 w-4" />
-            Позвонить
+            {siteData.phone.tel}
           </CtaButton>
         </div>
-        <a className="btn btn-primary md:hidden" href={`tel:${siteData.phone.tel}`}>
+        <a
+          className="btn btn-primary whitespace-nowrap px-3 text-xs md:hidden"
+          href={`tel:${siteData.phone.tel}`}
+          aria-label={`Позвонить ${siteData.phone.tel}`}
+        >
           <IconPhone className="h-4 w-4" />
+          {siteData.phone.tel}
         </a>
         <button
           type="button"
@@ -61,7 +66,10 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <CtaButton href={`tel:${siteData.phone.tel}`}>Позвонить</CtaButton>
+            <CtaButton href={`tel:${siteData.phone.tel}`} className="whitespace-nowrap">
+              <IconPhone className="h-4 w-4" />
+              {siteData.phone.tel}
+            </CtaButton>
           </div>
         </div>
       ) : null}

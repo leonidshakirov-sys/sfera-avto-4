@@ -9,9 +9,9 @@ export function MobileBar() {
         {workingHours.display}
       </p>
       <div className="grid grid-cols-2 gap-2">
-        <a href={`tel:${phone.tel}`} className="btn btn-primary">
+        <a href={`tel:${phone.tel}`} className="btn btn-primary whitespace-nowrap px-3 text-sm" aria-label={`Позвонить ${phone.tel}`}>
           <IconPhone className="h-4 w-4" />
-          Позвонить
+          {phone.tel}
         </a>
         <a href={messengers.whatsapp} className="btn btn-outline" target="_blank" rel="noopener">
           Написать

@@ -1,23 +1,23 @@
 import { Photo } from "@/components/Photo";
 import { siteData } from "@/data/siteData";
 import { CtaButton } from "@/components/CtaButton";
-import { IconCam, IconLight, IconRoad, IconShield } from "@/components/Icons";
+import { IconBus, IconMetro, IconRoad, IconShield } from "@/components/Icons";
 
 const highlights = [
   { icon: IconShield, title: "Охраняемая территория" },
-  { icon: IconCam, title: "Видеонаблюдение" },
-  { icon: IconLight, title: "Освещение" },
-  { icon: IconRoad, title: "Удобный въезд с МКАД" },
+  { icon: IconRoad, title: "Первая линия Варшавки и МКАД" },
+  { icon: IconBus, title: "Остановка рядом" },
+  { icon: IconMetro, title: "До Аннино — 1 остановка" },
 ];
 
 export function Hero() {
-  const { workingHours, address, area } = siteData;
+  const { workingHours, address, area, location } = siteData;
 
   return (
     <section id="top" className="relative min-h-[92vh] overflow-hidden">
       <Photo
         src="/images/hero.jpg"
-        alt="Охраняемая площадка Сфера Авто, 32-й км МКАД, владение 15"
+        alt="Охраняемая площадка Сфера Авто на первой линии Варшавского шоссе и МКАД"
         fill
         priority
         className="object-cover object-[center_62%]"
@@ -28,7 +28,7 @@ export function Hero() {
       <div className="wrap relative flex min-h-[92vh] flex-col justify-end pb-16 pt-28 md:justify-center md:pb-24 md:pt-20">
         <p className="eyebrow">{workingHours.long}</p>
         <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight md:text-6xl">
-          Охраняемая площадка на МКАД
+          Охраняемая площадка на Варшавском шоссе и МКАД
           <br />
           для автомобилей, спецтехники
           <br />
@@ -37,6 +37,9 @@ export function Hero() {
         <p className="mt-5 max-w-xl text-lg text-paper/80">
           Машиноместа и территория в аренду
           <br />
+          {location.summary}
+        </p>
+        <p className="mt-2 text-sm text-paper/70">
           {address.short} • {workingHours.display}
         </p>
         <p className="mt-3 text-sm text-muted">Открытая площадка {area}</p>

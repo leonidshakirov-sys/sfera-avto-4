@@ -13,7 +13,7 @@ export default function ThanksPage() {
         <p className="mt-4 text-muted">
           Если нужно быстрее, позвоните{" "}
           <a className="text-amber" href={`tel:${siteData.phone.tel}`}>
-            {siteData.phone.display}
+            {siteData.phone.tel}
           </a>
           .
         </p>
